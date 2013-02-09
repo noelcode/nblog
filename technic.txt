@@ -1,0 +1,4 @@
+picture support, refer to
+https://github.com/thoughtbot/paperclip
+http://railscasts.com/episodes/134-paperclip?autoplay=true
+

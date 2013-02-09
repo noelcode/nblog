@@ -40,3 +40,5 @@ gem 'jquery-rails'
 
 gem 'execjs'
 gem 'therubyracer'
+
+gem 'paperclip', '~>2.7'
