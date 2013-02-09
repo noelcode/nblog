@@ -17,3 +17,5 @@
 /vendor/bundle
 
 /public/.htaccess
+
+public/assets/*
