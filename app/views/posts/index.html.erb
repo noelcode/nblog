@@ -11,16 +11,15 @@
 <!--  <p><%= post.time %></p>
   <p><%= post.author %></p> -->
 
-  <p>>
+  <p>
 <%  if post.picture? %>
-  『有图看哇』
-<%  else %>
-   『没有图沃』
+  『图』
 <%  end %>
 <%= truncate(strip_tags(post.text), :length => 100) %></p>
 <!--  <p><%= link_to 'Edit', edit_post_path(post) %></p>
   <p><%= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' } %></p>
   -->
+<p>&nbsp;</p>
 <% end %>
 </section>
 
