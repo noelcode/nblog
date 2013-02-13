@@ -42,3 +42,5 @@ gem 'execjs'
 gem 'therubyracer'
 
 gem 'paperclip', '~>2.7'
+
+gem 'bcrypt-ruby'

@@ -35,6 +35,11 @@
     </article>
     <footer>
       <a href='http://nblog.myplayer3.com'>«回到nblog.myplayer3.com</a>
+      <% if User.find_by_id(session[:user_id]) %>
+        <%= User.find_by_id(session[:user_id]).name %>
+      <% else %>
+        <%= 'Vistor' %>
+    <% end %>
       <section id='copyright'>© 2013 Noel Blog, All Right Reserved. </section>
     </footer>
 

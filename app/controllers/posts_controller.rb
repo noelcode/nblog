@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  skip_before_filter :authorize, :only => [:show, :index]
+
   # GET /posts
   # GET /posts.json
   def index
@@ -26,6 +28,14 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
 
+    @post.time = Time.now
+
+    if User.find_by_id(session[:user_id])
+      @post.author = User.find_by_id(session[:user_id]).name
+    else
+      @post.author = 'Vistor'
+    end
+ 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @post }
