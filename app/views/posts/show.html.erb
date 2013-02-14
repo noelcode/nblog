@@ -9,12 +9,10 @@
 <section class='content'>
 
 <p>
-  <b>Time:</b>
-  <%= @post.time %>
-
-  <b>by <%= @post.author %></b>
+  <b><%= @post.author %></b> 发表于北京时间
+  <% Time.zone = "Beijing"%>
+  <%= @post.time.localtime.strftime("%Y/%m/%d %H:%M") %>
 </p>
-
 
 <%= image_tag @post.picture.url if @post.picture? %>
 
