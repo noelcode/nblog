@@ -10,7 +10,7 @@
 
 <p>
   <b><%= @post.author %></b> 发表于北京时间
-  <% Time.zone = "Beijing"%>
+<!--  <% Time.zone = "Beijing"%>  -->
   <%= @post.time.strftime("%Y/%m/%d %H:%M") %>
 </p>
 
