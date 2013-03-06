@@ -14,6 +14,10 @@ Nblog::Application.routes.draw do
   resources :posts
 
 
+  # JOE: below is a test, works and need this method in mass production
+  #  match ':id' => 'posts#show'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -66,6 +70,9 @@ Nblog::Application.routes.draw do
   # root :to => 'welcome#index'
   
   root :to => 'posts#index'
+
+# JOE: below is a test, works and need this method in mass production
+#  root :to => 'posts#show', :id => 5
 
 
   # See how all your routes lay out with "rake routes"
